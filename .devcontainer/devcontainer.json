@@ -1,0 +1,20 @@
+{
+  "name": "FHIR R4 Web App",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": { "label": "FHIR Web App", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "npm install && cp .env.example .env",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "PKief.material-icon-theme"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
