@@ -1,14 +1,12 @@
 # FHIR R4 Web App
 
-> Standalone browser UI for the [fhir-r4-api](https://github.com/lbrenman/fhir-r4-api). Browse, search, and manage all 15 FHIR R4 resources.
+> Standalone browser UI for the [fhir-r4-api-codepsace](https://github.com/lbrenman/fhir-r4-api-codepsace) mock data server. Browse, search, and manage all 15 FHIR R4 resources.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/lbrenman/fhir-r4-web)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/lbrenman/fhir-r4-web-codespace)
 
 ## Overview
 
 A lightweight Node.js/Express server that serves a single-page web app. The server has one job: expose a `/config.js` endpoint that injects `FHIR_API_BASE_URL` and `FHIR_API_KEY` from `.env` into the browser — so no credentials are hardcoded in the HTML.
-
-All FHIR API calls are made **from the browser** directly to the `fhir-r4-api` server.
 
 ## Features
 
@@ -24,14 +22,14 @@ All FHIR API calls are made **from the browser** directly to the `fhir-r4-api` s
 ## Prerequisites
 
 - Node.js 20+
-- A running `fhir-r4-api` instance (local or remote)
+- A running FHIR Server with API for data access
 
 ## Quick Start
 
 ### Option A — GitHub Codespaces
 
 1. Click the **Open in GitHub Codespaces** badge
-2. After setup completes, edit `.env` and set `FHIR_API_BASE_URL` to your `fhir-r4-api`'s forwarded Codespace URL
+2. After setup completes, edit `.env` and set `FHIR_API_BASE_URL` to your FHIR server's API
 3. Run `npm run dev`
 4. The browser opens automatically to port 4000
 
